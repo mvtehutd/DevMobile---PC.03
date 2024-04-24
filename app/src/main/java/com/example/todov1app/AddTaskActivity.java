@@ -20,7 +20,19 @@ public class AddTaskActivity extends AppCompatActivity {
         binding.addNewButton.setOnClickListener(view -> {
             String name = binding.taskNameEditText.getText().toString();
             String desc = binding.taskDescEditText.getText().toString();
-            Task task = new Task(name, desc);
+            String priority = "";
+            switch (binding.PrioridadeRadioGroup.getCheckedRadioButtonId()) {
+                case R.id.highPriorityRadioButton:
+                    priority = "high";
+                    break;
+                case R.id.mediumPriorityRadioButton:
+                    priority = "medium";
+                    break;
+                case R.id.lowPriorityRadioButton:
+                    priority = "low";
+                    break;
+            }
+            Task task = new Task(name, desc, priority);
             Intent i = new Intent();
             i.putExtra("taskAdded", task);
             setResult(RESULT_OK, i);

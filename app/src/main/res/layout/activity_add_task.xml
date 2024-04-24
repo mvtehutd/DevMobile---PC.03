@@ -21,10 +21,12 @@
         android:id="@+id/addNewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Add"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/PrioridadeRadioGroup" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -58,4 +60,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/PrioridadeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <RadioButton
+            android:id="@+id/highPriorityRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="high" />
+
+        <RadioButton
+            android:id="@+id/mediumPriorityRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="medium" />
+
+        <RadioButton
+            android:id="@+id/lowPriorityRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="low" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
